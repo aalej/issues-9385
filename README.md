@@ -124,3 +124,27 @@ The request seems to be malformed(?). Checking the debug logs there are 2 instan
 ```
 Creating new index: {"collectionGroup":"myVectorCollection","queryScope":"COLLECTION","density":"SPARSE_ALL","fields":[{"fieldPath":"__name__","order":"ASCENDING"},{"fieldPath":"embedding","vectorConfig":{"dimension":768,"flat":{}}},{"fieldPath":"__name__"}]}
 ```
+
+## Post Fix
+
+Using firebase-tools v14.23.0
+
+1. Run `firebase deploy --only firestore:indexes --project PROJECT_ID`
+```
+$ firebase --version
+14.23.0
+$ firebase deploy --only firestore:indexes --project PROJECT_ID-testproj
+
+=== Deploying to 'PROJECT_ID-testproj'...
+
+i  deploying firestore
+i  firestore: ensuring required API firestore.googleapis.com is enabled...
+i  firestore: ensuring required API firestore.googleapis.com is enabled...
+i  firestore: reading indexes from firestore.indexes.json...
+i  cloud.firestore: checking firestore.rules for compilation errors...
+✔  cloud.firestore: rules file firestore.rules compiled successfully
+i  firestore: deploying indexes...
+✔  firestore: deployed indexes in firestore.indexes.json successfully for (default) database
+
+✔  Deploy complete!
+```
