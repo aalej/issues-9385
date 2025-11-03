@@ -133,9 +133,9 @@ Using firebase-tools v14.23.0
 ```
 $ firebase --version
 14.23.0
-$ firebase deploy --only firestore:indexes --project PROJECT_ID-testproj
+$ firebase deploy --only firestore:indexes --project PROJECT_ID
 
-=== Deploying to 'PROJECT_ID-testproj'...
+=== Deploying to 'PROJECT_ID'...
 
 i  deploying firestore
 i  firestore: ensuring required API firestore.googleapis.com is enabled...
